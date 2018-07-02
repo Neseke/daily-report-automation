@@ -1,0 +1,22 @@
+{
+   "name": "google-apps-script-quickstart",
+   "version": "1.0.0",
+   "description": "A Apps Script Attempt for automating reports",
+   "main": "index.js",
+   "scripts": {
+      "start": "node src/authorize"
+   },
+   "keywords": [
+      "automation"
+   ],
+   "author": "Lukas Höpfner",
+   "license": "ISC",
+   "dependencies": {
+      "googleapis": "^32.0.0",
+      "npm": "^6.1.0",
+      "opn": "^5.3.0"
+   },
+   "devDependencies": {
+      "eslint": "^5.0.0-rc.0"
+   }
+}
