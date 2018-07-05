@@ -1,7 +1,8 @@
 var cron = require('node-cron');
 const { exec } = require('child_process');
 
-cron.schedule('*/20 * * * * *', function() {
-   console.log('running a task every 40 seconds');
+function runScript() {
    exec('npm start', (error, stdout) => console.log(stdout));
-});
+}
+
+cron.schedule('00 00 14 * * *', runScript(), null, true, 'Europe/Berlin');

@@ -4,8 +4,8 @@
    "description": "A Apps Script Attempt for automating reports",
    "main": "index.js",
    "scripts": {
-      "start": "node src/dryRun",
-      "serve": "node src/server"
+      "serve": "node src/dryRun",
+      "start": "node src/server"
    },
    "keywords": [
       "automation"
