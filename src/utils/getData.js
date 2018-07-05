@@ -6,7 +6,6 @@ const getSums = require('./getSums');
 async function getData(auth) {
    const sums = contentOwnerAccounts.map(async ({ name, contentOwnerId }) => {
       const channelIds = await getChannelIds(auth, contentOwnerId);
-
       const analytics = await getAnalytics(auth, channelIds, contentOwnerId);
 
       return { name, sums: getSums(analytics) };

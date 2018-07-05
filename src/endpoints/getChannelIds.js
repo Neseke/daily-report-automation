@@ -22,9 +22,7 @@ async function getChannelIds(auth, onBehalfOfContentOwner, pageToken) {
    channelIds = [...channelIds, ...channelIdsOnThisPage];
 
    if (channels.data.nextPageToken) {
-      console.log(
-         `${i} of ${parseInt(247 / channelsConfig.maxResults, 10)} pages`
-      );
+      console.log(`${i}th page ...`);
       i += 1;
       return await getChannelIds(
          auth,

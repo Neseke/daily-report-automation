@@ -8,12 +8,14 @@ const callAPI = require('./callAPI');
 
 const TOKEN_PATH = 'credentials.json';
 
-// Load client secrets from a local file.
-fs.readFile('client_secret.json', async (err, content) => {
-   if (err) return console.log('Error loading client secret file:', err);
-   // Authorize a client with credentials, then call the Google Drive API.
-   authorize(JSON.parse(content), await callAPI);
-});
+// Load client secrets from a local file
+function readCredentials() {
+   fs.readFile('client_secret.json', async (err, content) => {
+      if (err) return console.log('Error loading client secret file:', err);
+      // Authorize a client with credentials, then call the Google Drive API.
+      authorize(JSON.parse(content), await callAPI);
+   });
+}
 
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
@@ -67,3 +69,5 @@ function getAccessToken(oAuth2Client, callback) {
       });
    });
 }
+
+module.exports = readCredentials;
